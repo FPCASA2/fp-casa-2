@@ -1,184 +1,989 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#17344a">
-  <meta name="description" content="FP CASA 2, votre partenaire de confiance à Casablanca : conciergerie privée, transport, intendance et services sur mesure pour particuliers et professionnels.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="FP CASA 2 — Des solutions pensées pour vous">
-  <meta property="og:description" content="Conciergerie, coordination et services sur mesure à Casablanca.">
-  <title>FP CASA 2 | Conciergerie & Services à Casablanca</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--ink:#162c3b;--ink2:#294456;--muted:#657987;--accent:#a77a4a;--accent2:#cba676;--navy:#15354a;--navy-deep:#102a3d;--paper:#fff;--cream:#f7f6f3;--pale:#eef3f3;--line:#dce5e7;--shadow:0 28px 65px rgba(19,49,66,.09);--radius:12px;--max:1170px}
-    *,*::before,*::after{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:90px}
-    body{margin:0;font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    h1,h2,h3,h4,p{margin-top:0}h1,h2,h3,h4{font-family:'Manrope',sans-serif;line-height:1.18;letter-spacing:-.045em}
-    a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}img{display:block;width:100%}svg{display:block}
-    .container{width:min(calc(100% - 48px),var(--max));margin-inline:auto}
-    .eyebrow{display:inline-flex;align-items:center;gap:12px;text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--accent);line-height:1.5}
-    .eyebrow::before{content:'';display:block;width:26px;height:1px;background:currentColor;flex:none}
-    .eyebrow.on-dark{color:#e2c5a5}
-    .eyebrow.no-line::before{display:none}
-    .section-heading{max-width:660px;margin-bottom:42px}
-    .section-heading h2,.split-copy h2,.contact-copy h2{font-size:clamp(32px,4vw,49px);margin:18px 0 17px;font-weight:800}
-    .section-heading p,.split-copy>p,.contact-copy>p{color:var(--muted);font-size:16px;max-width:600px}
-    .btn{display:inline-flex;justify-content:center;align-items:center;gap:14px;min-height:51px;padding:13px 24px;border-radius:4px;font-size:13px;font-weight:800;letter-spacing:.01em;transition:background .25s,transform .25s,border-color .25s,color .25s;border:1px solid transparent}
-    .btn:hover{transform:translateY(-2px)}.btn svg{width:17px;height:17px}
-    .btn-primary{background:var(--navy);color:#fff;border-color:var(--navy)}.btn-primary:hover{background:#24526b}
-    .btn-outline{background:transparent;color:var(--navy);border-color:#9db1ba}.btn-outline:hover{background:var(--pale);border-color:var(--navy)}
-    .btn-light{color:var(--navy);background:#fff}.btn-light:hover{background:#eef4f6}
-    .btn-text{font-size:13px;font-weight:800;color:var(--navy);display:inline-flex;gap:10px;align-items:center;border-bottom:1px solid var(--accent);padding-bottom:6px}
-    .btn-text span{transition:transform .2s}.btn-text:hover span{transform:translateX(4px)}
-    .topbar{background:var(--navy-deep);color:#c5d2d8;font-size:11px;letter-spacing:.055em}
-    .topbar-inner{min-height:34px;display:flex;justify-content:space-between;align-items:center;gap:16px}
-    .topbar-right{display:flex;align-items:center;gap:21px}.topbar svg{width:13px;height:13px;display:inline-block;vertical-align:middle;margin-right:5px;color:#d0ae89}
-    .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid #edf0f1;transition:box-shadow .25s}
-    .site-header.scrolled{box-shadow:0 9px 28px rgba(22,44,59,.09)}
-    .nav-inner{min-height:85px;display:flex;justify-content:space-between;align-items:center;gap:26px}
-    .brand{display:flex;align-items:center;gap:12px;flex:none}
-    .brand-mark{width:49px;height:49px;display:grid;place-items:center;background:var(--navy);color:white;border-radius:2px;position:relative;font-family:'Manrope',sans-serif;font-size:20px;letter-spacing:-.11em;font-weight:800;padding-right:3px}
-    .brand-mark::after{content:'';position:absolute;inset:5px;border:1px solid rgba(255,255,255,.38);pointer-events:none}
-    .brand-lines{display:flex;flex-direction:column;line-height:1.25}.brand-name{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:.075em;font-size:17px}.brand-label{font-size:9px;font-weight:800;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-top:4px}
-    .main-nav{display:flex;align-items:center;gap:31px}.main-nav a{font-size:12px;font-weight:800;color:#314a59;white-space:nowrap;transition:color .2s}.main-nav a:hover,.main-nav a:focus-visible{color:var(--accent)}
-    .nav-cta{min-height:43px;padding:10px 19px;font-size:12px}.menu-toggle{display:none;background:none;border:1px solid var(--line);width:44px;height:44px;border-radius:3px;align-items:center;justify-content:center;color:var(--ink)}.menu-toggle svg{width:22px;height:22px}
-    .hero{background:#f8f9f7;overflow:hidden;position:relative}
-    .hero-grid{display:grid;grid-template-columns:1.03fr 1fr;min-height:610px;align-items:center;gap:0}
-    .hero-copy{padding:78px 65px 90px 0;z-index:2;position:relative}
-    .hero-kicker{display:inline-flex;gap:12px;align-items:center;letter-spacing:.17em;text-transform:uppercase;font-size:11px;color:#72818a;font-weight:800;margin-bottom:26px}
-    .hero-kicker span{width:25px;height:2px;background:var(--accent)}
-    .hero h1{font-size:clamp(44px,5.5vw,70px);font-weight:800;line-height:1.09;margin:0 0 24px;max-width:680px;letter-spacing:-.055em}
-    .hero h1 em{font-style:normal;color:var(--accent)}
-    .hero-lead{font-size:17px;color:#5b6c77;line-height:1.8;margin-bottom:31px;max-width:520px}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
-    .hero-foot{display:flex;align-items:center;gap:12px;margin-top:52px;color:#607581;font-size:12px;font-weight:700}.hero-foot svg{width:19px;height:19px;color:var(--accent)}
-    .hero-visual{height:100%;min-height:610px;position:relative;isolation:isolate}
-    .hero-visual::before{content:'';position:absolute;inset:0 -200px 0 0;background:linear-gradient(180deg,rgba(15,45,62,.05),rgba(8,32,48,.19)),url('https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=1400&q=82') center/cover no-repeat;z-index:-2}
-    .hero-visual::after{content:'';position:absolute;left:-23px;bottom:0;width:23px;height:42%;background:var(--accent);z-index:-1}
-    .hero-caption{position:absolute;bottom:38px;left:38px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);box-shadow:var(--shadow);padding:18px 22px 18px 20px;max-width:285px;border-left:3px solid var(--accent)}
-    .hero-caption strong{display:block;font:800 14px 'Manrope',sans-serif;margin-bottom:4px}.hero-caption small{display:block;color:#637987;font-size:11px;line-height:1.5}
-    .intro-strip{background:#fff;border-bottom:1px solid var(--line)}.intro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:34px 0}
-    .intro-item{display:flex;align-items:flex-start;gap:17px;padding:5px 28px;border-right:1px solid #e6ebed}.intro-item:first-child{padding-left:0}.intro-item:last-child{border-right:0;padding-right:0}
-    .intro-icon{color:var(--accent);width:33px;height:33px;flex:none}.intro-item strong{font:800 14px 'Manrope',sans-serif;display:block;margin-bottom:3px}.intro-item p{font-size:12px;margin:0;color:var(--muted);line-height:1.65}
-    .section{padding:105px 0}
-    .services{background:#fff}.services .section-heading{text-align:center;margin-inline:auto}.services .section-heading .eyebrow{justify-content:center}.services .section-heading .eyebrow::before{display:none}
-    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .service-card{border:1px solid #e4eaec;background:#fff;padding:35px 29px 32px;min-height:255px;position:relative;transition:border-color .3s,box-shadow .3s,transform .3s}
-    .service-card:hover{border-color:#bdcdd1;box-shadow:var(--shadow);transform:translateY(-4px)}
-    .service-card::after{content:'';position:absolute;left:29px;bottom:-1px;width:47px;height:2px;background:var(--accent);transition:width .25s}.service-card:hover::after{width:80px}
-    .service-icon{display:flex;justify-content:center;align-items:center;background:#f1f5f5;width:54px;height:54px;color:var(--navy);margin-bottom:24px;border-radius:3px}
-    .service-icon svg{width:27px;height:27px;stroke-width:1.6}
-    .service-card h3{font-size:18px;letter-spacing:-.025em;margin:0 0 12px}.service-card p{font-size:13px;line-height:1.8;color:var(--muted);margin-bottom:0}
-    .approach{background:var(--cream)}
-    .approach-grid{display:grid;grid-template-columns:.82fr 1.18fr;align-items:start;gap:105px}
-    .approach .section-heading{margin-bottom:24px}.approach .section-heading p{font-size:15px}
-    .approach-aside{padding-top:16px}.approach-aside .btn-text{margin-top:12px}
-    .steps{position:relative}.steps::before{content:'';position:absolute;top:17px;bottom:30px;left:24px;width:1px;background:#cedcde}
-    .step{position:relative;display:flex;gap:26px;padding-bottom:39px}.step:last-child{padding-bottom:0}.step-no{height:49px;width:49px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:white;font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;flex:none;z-index:1;box-shadow:0 0 0 8px var(--cream)}.step h3{font-size:19px;margin:4px 0 9px}.step p{font-size:14px;color:var(--muted);margin:0;max-width:480px}
-    .about{background:var(--navy-deep);color:#fff;padding:0;overflow:hidden}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;min-height:540px}
-    .about-image{background:linear-gradient(0deg,rgba(9,29,43,.22),rgba(9,29,43,.05)),url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=83') center/cover no-repeat;min-height:460px}
-    .about-content{display:flex;align-items:center;padding:85px clamp(32px,6vw,100px) 85px clamp(32px,6vw,94px)}
-    .about-content>div{max-width:510px}.about-content h2{font-size:clamp(32px,3.8vw,49px);margin:19px 0 21px}.about-content p{color:#b7cbd4;font-size:14px;line-height:1.95;margin-bottom:23px}
-    .about-list{padding:0;margin:29px 0 32px;list-style:none;display:grid;gap:14px}.about-list li{display:flex;gap:12px;font-size:13px;color:#e0ebed;align-items:center}.about-list svg{width:18px;height:18px;color:#dfbb90;flex:none}
-    .about .btn{border-color:#78929f;color:#fff}.about .btn:hover{background:#ffffff1c}
-    .audiences{background:#fff}.audiences-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.audience-card{min-height:330px;padding:42px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;overflow:hidden;color:white}
-    .audience-card::before{content:'';position:absolute;inset:0;background-size:cover;background-position:center;z-index:-2;transition:transform .4s}.audience-card:hover::before{transform:scale(1.045)}
-    .audience-card::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,27,42,.94),rgba(8,27,42,.10));z-index:-1}
-    .audience-card:nth-child(1)::before{background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=83')}
-    .audience-card:nth-child(2)::before{background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1100&q=83')}
-    .audience-card .eyebrow{color:#dbc6aa}.audience-card .eyebrow::before{width:15px}.audience-card h3{margin:11px 0;font-size:27px}.audience-card p{margin:0;max-width:450px;font-size:14px;color:#e5ebeb;line-height:1.75}
-    .quote-band{background:#eaf0f1;padding:65px 0}.quote-inner{display:flex;justify-content:space-between;gap:40px;align-items:center}.quote-inner h2{font-size:clamp(27px,3.4vw,40px);margin:13px 0 0;max-width:690px}
-    .contact{background:#fff}.contact-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:95px;align-items:start}.contact-copy{padding-top:12px}
-    .contact-copy p{font-size:15px}.contact-info{margin-top:38px;display:grid;gap:26px}
-    .contact-info-item{display:flex;align-items:start;gap:14px}.contact-info-item svg{width:21px;height:21px;flex:none;color:var(--accent);margin-top:3px}.contact-info-item strong{font:800 13px 'Manrope',sans-serif;display:block;margin-bottom:4px}.contact-info-item p,.contact-info-item a{display:block;color:var(--muted);font-size:13px;margin:0;overflow-wrap:anywhere}
-    .contact-panel{background:#f7f9f9;border:1px solid #e0e8ea;padding:39px 41px}.contact-panel h3{font-size:23px;margin:0 0 8px}.contact-panel>p{color:var(--muted);font-size:13px;margin:0 0 29px}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{margin-bottom:19px}.field label{display:block;font-size:12px;font-weight:800;color:#344b59;margin-bottom:7px}.field input,.field textarea,.field select{width:100%;border:1px solid #d6e1e3;min-height:48px;padding:12px 13px;color:var(--ink);background:#fff;border-radius:2px;outline:none;font-size:13px;transition:border-color .25s,box-shadow .25s}.field textarea{min-height:122px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:#7098a8;box-shadow:0 0 0 3px #23587118}.field input::placeholder,.field textarea::placeholder{color:#8c9ba4}
-    .submit-btn{width:100%}.form-note{color:#7f8e96;font-size:11px!important;line-height:1.6;margin:12px 0 0!important}
-    .status{display:none;margin-top:15px;padding:12px 15px;background:#fef4e8;border:1px solid #efd5b4;color:#6f4d29;font-size:12px;line-height:1.6}.status.show{display:block}
-    .footer{background:#0d2537;color:#c5d3da;padding:63px 0 20px}.footer-grid{display:grid;grid-template-columns:1.3fr .65fr .85fr;gap:70px;padding-bottom:52px}.footer .brand-mark{background:#fff;color:var(--navy)}.footer .brand-mark::after{border-color:#c5d1d6}.footer .brand-name{color:#fff}.footer .brand-label{color:#d0b190}.footer-about{max-width:380px;color:#a5b9c4;font-size:13px;line-height:1.9;margin-top:22px}
-    .footer h4{color:#fff;font-size:14px;margin:5px 0 21px;letter-spacing:0}.footer ul{padding:0;margin:0;list-style:none;display:grid;gap:12px}.footer li,.footer li a{font-size:13px;color:#a5b9c4}.footer li a:hover{color:#fff}.footer-bottom{border-top:1px solid #ffffff20;padding-top:21px;display:flex;justify-content:space-between;gap:10px;font-size:11px;color:#849dab}
-    .backtop{position:fixed;right:20px;bottom:22px;background:var(--navy);color:#fff;border:0;width:41px;height:41px;display:grid;place-items:center;z-index:90;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:0 6px 20px #102b3d28}.backtop.visible{opacity:1;pointer-events:auto}.backtop:hover{transform:translateY(-3px)}.backtop svg{width:18px;height:18px}
-    .reveal{opacity:1;transform:none}.reveal.visible{opacity:1;transform:none}
-    @media(min-width:1450px){.hero-visual::before{right:calc((1170px - 100vw)/2)}}
-    @media(max-width:1080px){.main-nav{gap:18px}.approach-grid{gap:55px}.contact-grid{gap:45px}.about-content{padding:68px 45px}.hero h1{font-size:56px}.hero-copy{padding-right:40px}}
-    @media(max-width:820px){.container{width:min(calc(100% - 36px),var(--max))}.topbar-right{display:none}.nav-inner{min-height:72px}.main-nav,.nav-inner>.nav-cta{display:none}.menu-toggle{display:flex}.main-nav.open{display:flex;position:absolute;top:100%;left:0;right:0;background:#fff;box-shadow:0 22px 30px rgba(8,30,44,.12);padding:16px 20px 25px;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid var(--line)}.main-nav.open a{padding:15px 4px;border-bottom:1px solid #edf1f1;font-size:14px}.hero-grid{grid-template-columns:1fr}.hero-copy{padding:73px 0 54px}.hero h1{font-size:clamp(42px,8vw,64px)}.hero-visual{min-height:390px}.hero-visual::before{inset:0 -20px 0 -20px}.hero-visual::after{display:none}.hero-caption{left:18px;bottom:18px}.intro-grid{grid-template-columns:1fr;gap:20px;padding:30px 0}.intro-item,.intro-item:first-child,.intro-item:last-child{padding:0 0 20px;border-right:none;border-bottom:1px solid var(--line)}.intro-item:last-child{padding-bottom:0;border-bottom:none}.section{padding:76px 0}.service-grid{grid-template-columns:repeat(2,1fr)}.approach-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.approach-aside{padding-top:0}.about-grid{grid-template-columns:1fr}.about-image{min-height:350px;order:2}.about-content{padding:74px max(18px,calc((100vw - 720px)/2));order:1}.footer-grid{gap:35px;grid-template-columns:1.3fr 1fr}.footer-grid>:last-child{grid-column:1/-1}}
-    @media(max-width:560px){.container{width:calc(100% - 34px)}.topbar{font-size:10px}.brand-mark{height:43px;width:43px;font-size:18px}.brand-name{font-size:15px}.brand-label{font-size:8px}.hero-copy{padding:57px 0 47px}.hero h1{font-size:clamp(40px,11vw,53px)}.hero-lead{font-size:15px}.hero-foot{margin-top:37px}.hero-actions .btn{width:100%}.hero-visual{min-height:335px}.hero-caption{max-width:270px;padding:14px 16px}.section{padding:65px 0}.section-heading{margin-bottom:30px}.section-heading h2,.split-copy h2,.contact-copy h2{font-size:32px}.service-grid,.audiences-grid{grid-template-columns:1fr}.service-card{min-height:0;padding:28px 25px}.service-icon{margin-bottom:18px}.about-content{padding:61px 18px}.about-image{min-height:290px}.audience-card{min-height:310px;padding:31px}.quote-band{padding:53px 0}.quote-inner{align-items:start;flex-direction:column;gap:24px}.contact-panel{padding:26px 20px}.form-row{grid-template-columns:1fr;gap:0}.footer{padding-top:53px}.footer-grid{grid-template-columns:1fr;gap:30px;padding-bottom:35px}.footer-grid>:last-child{grid-column:auto}.footer-bottom{flex-direction:column;align-items:start;gap:4px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}.reveal{opacity:1;transform:none}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="FP CASA 2 accompagne les candidats qualifiés du Maroc et d'Afrique vers des opportunités professionnelles en Allemagne et en Europe.">
+<title>FP CASA 2 | Recrutement international</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy:#142d36;
+  --teal:#176d72;
+  --gold:#d9aa6a;
+  --text:#20353b;
+  --muted:#65757a;
+  --light:#f2f7f5;
+  --white:#ffffff;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  font-family:"DM Sans",sans-serif;
+  color:var(--text);
+  line-height:1.7;
+}
+h1,h2,h3 {
+  font-family:"Plus Jakarta Sans",sans-serif;
+  line-height:1.2;
+}
+a {text-decoration:none;color:inherit}
+.container {width:90%;max-width:1160px;margin:auto}
+section {padding:85px 0}
+.eyebrow {
+  color:var(--teal);
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+h2 {font-size:clamp(30px,4vw,44px);color:var(--navy)}
+p {color:var(--muted)}
+.btn {
+  display:inline-block;
+  padding:14px 24px;
+  border-radius:7px;
+  font-weight:700;
+  font-size:14px;
+  transition:.3s;
+}
+.btn-primary {background:var(--teal);color:white}
+.btn-primary:hover {background:var(--navy)}
+.btn-outline {border:1px solid var(--teal);color:var(--teal)}
+.btn-outline:hover {background:var(--light)}
+.section-head {max-width:720px;margin-bottom:40px}
+.section-head p {font-size:17px}
+
+/* HEADER */
+.topbar {
+  background:var(--navy);
+  color:#d5e4e3;
+  font-size:12px;
+  text-align:center;
+  padding:8px;
+}
+header {
+  background:white;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 3px 18px #00000010;
+}
+.header-inner {
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.logo {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+  color:var(--navy);
+}
+.logo-icon {
+  background:var(--navy);
+  color:white;
+  width:46px;
+  height:46px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  font-size:17px;
+}
+.logo small {
+  display:block;
+  font-size:9px;
+  letter-spacing:1px;
+  color:var(--muted);
+}
+nav {display:flex;align-items:center;gap:22px}
+nav a {font-size:13px;font-weight:700}
+nav a:hover {color:var(--teal)}
+.menu-toggle {
+  display:none;
+  background:transparent;
+  border:0;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero {
+  background:linear-gradient(120deg,#f0f7f5,#ffffff);
+  overflow:hidden;
+}
+.hero-inner {
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  align-items:center;
+  gap:55px;
+  padding:55px 0;
+  min-height:610px;
+}
+.hero h1 {
+  font-size:clamp(40px,5vw,66px);
+  letter-spacing:-2px;
+  margin:18px 0 24px;
+  color:var(--navy);
+}
+.hero h1 span {color:var(--teal)}
+.hero p {font-size:18px;max-width:560px}
+.hero-buttons {display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero-image {
+  height:490px;
+  border-radius:145px 20px 20px 20px;
+  background:
+    linear-gradient(#142d3620,#142d3650),
+    url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1100&q=85")
+    center/cover;
+  position:relative;
+}
+.hero-badge {
+  position:absolute;
+  bottom:25px;
+  left:-25px;
+  background:white;
+  padding:23px;
+  border-radius:12px;
+  box-shadow:0 15px 40px #00000020;
+  max-width:245px;
+}
+.hero-badge strong {color:var(--navy);display:block}
+.hero-badge p {font-size:12px;margin:6px 0 0}
+
+/* BENEFITS */
+.proof-strip {background:white;border-bottom:1px solid #e5ecea}
+.proof-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  padding:30px 0;
+}
+.proof-item {display:flex;align-items:center;gap:15px}
+.proof-icon {
+  background:#e7f2ef;
+  color:var(--teal);
+  font-size:25px;
+  width:48px;
+  height:48px;
+  border-radius:11px;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+}
+.proof-item strong {display:block;font-size:14px}
+.proof-item small {color:var(--muted)}
+
+/* CARDS */
+.grid-3 {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.card {
+  background:white;
+  border:1px solid #e1eae7;
+  border-radius:15px;
+  overflow:hidden;
+  transition:.3s;
+}
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 15px 40px #142d3618;
+}
+.card-img {
+  height:195px;
+  background-position:center;
+  background-size:cover;
+}
+.card-body {padding:26px}
+.card h3 {font-size:19px;color:var(--navy);margin:0 0 12px}
+.card p {font-size:14px;margin:0}
+.card a {
+  display:inline-block;
+  color:var(--teal);
+  font-weight:700;
+  font-size:13px;
+  margin-top:15px;
+}
+.bg-light {background:#f5f8f6}
+
+/* PROCESS */
+.steps {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:18px;
+}
+.step {
+  border-top:3px solid var(--teal);
+  padding:25px 8px 10px 0;
+}
+.step-num {
+  color:var(--teal);
+  font-size:14px;
+  font-weight:800;
+}
+.step h3 {font-size:17px;margin:10px 0}
+.step p {font-size:13px}
+
+/* SPLIT */
+.split {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:65px;
+}
+.split-image {
+  height:460px;
+  border-radius:18px;
+  background-position:center;
+  background-size:cover;
+}
+.split p {font-size:16px}
+.check-list {list-style:none;padding:0;margin:24px 0}
+.check-list li {margin-bottom:12px;font-size:14px}
+.check-list li:before {
+  content:"✓";
+  color:var(--teal);
+  font-weight:800;
+  margin-right:12px;
+}
+
+/* LANGUAGE */
+.levels {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.level {
+  border:1px solid #dce9e6;
+  padding:25px;
+  border-radius:14px;
+  background:white;
+}
+.level b {font-size:30px;color:var(--teal)}
+.level h3 {font-size:17px;margin:10px 0}
+.level p {font-size:13px}
+
+/* EMPLOYERS */
+.employer-section {
+  background:var(--navy);
+  color:white;
+}
+.employer-section h2 {color:white}
+.employer-section p {color:#c4d4d6}
+.employer-section .eyebrow {color:var(--gold)}
+
+/* VALUES */
+.values {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+.value {border-left:3px solid var(--gold);padding-left:18px}
+.value h3 {font-size:16px;color:var(--navy)}
+.value p {font-size:13px}
+
+/* FAQ */
+.faq {max-width:850px;margin:auto}
+.faq details {
+  border-bottom:1px solid #dce7e5;
+  padding:20px 0;
+}
+.faq summary {
+  cursor:pointer;
+  font-weight:700;
+  color:var(--navy);
+}
+.faq details p {font-size:14px}
+
+/* CONTACT */
+.contact-grid {
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:60px;
+}
+.form-box {
+  background:white;
+  padding:35px;
+  border-radius:15px;
+  border:1px solid #dce7e5;
+}
+form {display:grid;gap:14px}
+input,select,textarea {
+  width:100%;
+  padding:13px 14px;
+  border:1px solid #ccd9d7;
+  border-radius:7px;
+  font-family:inherit;
+  font-size:14px;
+}
+textarea {min-height:125px;resize:vertical}
+input:focus,select:focus,textarea:focus {
+  outline:2px solid var(--teal);
+}
+form button {
+  background:var(--teal);
+  color:white;
+  border:none;
+  padding:15px;
+  border-radius:7px;
+  font-weight:700;
+}
+form button:disabled {opacity:.55;cursor:not-allowed}
+.note {font-size:12px;color:#79603d}
+.contact-info {margin-bottom:26px}
+.contact-info strong {display:block;color:var(--navy)}
+.contact-info p {margin:5px 0}
+.contact-box {
+  background:#e9f3f0;
+  border-radius:14px;
+  padding:25px;
+}
+
+/* FOOTER */
+footer {
+  background:#102b33;
+  color:#c6d6d8;
+  padding:65px 0 25px;
+}
+.footer-grid {
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:50px;
+}
+footer h3 {color:white}
+footer p {color:#b0c2c4;font-size:13px}
+footer a {display:block;margin:9px 0;font-size:13px}
+.footer-bottom {
+  border-top:1px solid #ffffff25;
+  margin-top:45px;
+  padding-top:20px;
+  font-size:12px;
+}
+
+/* MOBILE */
+@media(max-width:900px) {
+  .menu-toggle {display:block}
+  nav {
+    display:none;
+    position:absolute;
+    top:78px;
+    left:0;
+    right:0;
+    background:white;
+    padding:20px;
+    flex-direction:column;
+    box-shadow:0 12px 25px #00000015;
+  }
+  nav.open {display:flex}
+  .hero-inner {grid-template-columns:1fr}
+  .hero-image {height:400px;margin:0 20px}
+  .grid-3 {grid-template-columns:repeat(2,1fr)}
+  .steps {grid-template-columns:repeat(2,1fr)}
+  .split {grid-template-columns:1fr;gap:35px}
+  .levels {grid-template-columns:repeat(2,1fr)}
+  .values {grid-template-columns:repeat(2,1fr)}
+  .contact-grid {grid-template-columns:1fr}
+  .footer-grid {grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px) {
+  section {padding:65px 0}
+  .container {width:90%}
+  .hero h1 {font-size:39px}
+  .hero p {font-size:16px}
+  .hero-image {height:305px}
+  .hero-badge {left:-12px;bottom:10px;padding:15px}
+  .proof-grid,.grid-3,.values,.footer-grid {
+    grid-template-columns:1fr;
+  }
+  .proof-grid {gap:18px}
+  .steps,.levels {grid-template-columns:1fr 1fr}
+  .step {padding-right:5px}
+  .split-image {height:300px}
+  .contact-grid {gap:30px}
+  .form-box {padding:20px}
+  .topbar {font-size:10px}
+}
+@media(prefers-reduced-motion:reduce) {
+  html {scroll-behavior:auto}
+  .card,.btn {transition:none}
+}
+</style>
 </head>
+
 <body>
-  <!-- Remplacer les informations de contact par celles validées par FP CASA 2 avant diffusion publique. -->
-  <div class="topbar"><div class="container topbar-inner"><span>Votre partenaire de proximité à Casablanca</span><div class="topbar-right"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1116 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Casablanca · Maroc</span><span>FP CASA 2</span></div></div></div>
-  <header class="site-header" id="siteHeader">
-    <div class="container nav-inner">
-      <a href="#accueil" class="brand" aria-label="FP CASA 2, accueil"><span class="brand-mark" aria-hidden="true">FP</span><span class="brand-lines"><span class="brand-name">FP CASA 2</span><span class="brand-label">Services & Conciergerie</span></span></a>
-      <nav class="main-nav" id="mainNav" aria-label="Navigation principale"><a href="#accueil">Accueil</a><a href="#services">Nos services</a><a href="#approche">Notre approche</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></nav>
-      <a class="btn btn-primary nav-cta" href="#contact">Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav"><svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-    </div>
-  </header>
-  <main>
-    <section id="accueil" class="hero" aria-labelledby="heroTitle"><div class="container hero-grid"><div class="hero-copy">
-      <div class="hero-kicker"><span></span>Services sur mesure · Casablanca</div>
-      <h1 id="heroTitle">La sérénité au cœur de <em>votre quotidien.</em></h1>
-      <p class="hero-lead">Chez FP CASA 2, nous vous accompagnons avec des solutions de conciergerie, de coordination et d'assistance adaptées à vos besoins personnels et professionnels.</p>
-      <div class="hero-actions"><a class="btn btn-primary" href="#services">Découvrir nos services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a class="btn btn-outline" href="#contact">Nous contacter</a></div>
-      <div class="hero-foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>Disponibilité, discrétion et suivi personnalisé</div>
-    </div><div class="hero-visual" role="img" aria-label="Environnement professionnel et contemporain"><div class="hero-caption"><strong>À chaque besoin, sa solution.</strong><small>Une approche personnalisée, au service de vos priorités.</small></div></div></div></section>
-    <div class="intro-strip"><div class="container intro-grid">
-      <div class="intro-item"><svg class="intro-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><strong>Un interlocuteur dédié</strong><p>Une relation de proximité pour comprendre vos attentes.</p></div></div>
-      <div class="intro-item"><svg class="intro-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19V5h16v14H4Zm4-6h8M8 9h8"/></svg><div><strong>Des prestations adaptées</strong><p>Des solutions qui s'ajustent à chaque demande.</p></div></div>
-      <div class="intro-item"><svg class="intro-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 2M14 3h7v7"/></svg><div><strong>Un accompagnement suivi</strong><p>De la première prise de contact à la coordination.</p></div></div>
-    </div></div>
-    <section class="section services" id="services"><div class="container">
-      <div class="section-heading reveal"><span class="eyebrow">Nos domaines d'expertise</span><h2>Un ensemble de services pour répondre à vos besoins.</h2><p>Pour les particuliers comme pour les entreprises, FP CASA 2 propose un accompagnement modulable, pensé pour vous simplifier la vie.</p></div>
-      <div class="service-grid">
-        <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.3-7-10a7 7 0 0 1 14 0c0 5.7-7 10-7 10Z"/><circle cx="12" cy="11" r="2"/><path d="M3 4h2m14 0h2"/></svg></div><h3>Conciergerie privée</h3><p>Réservations, organisation de séjours, demandes particulières et assistance dans la gestion de votre quotidien.</p></article>
-        <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16 6.6 9h10.8l1.6 7M3 16h18v4H3zM7 20v1m10-1v1M7 12h.01M17 12h.01"/></svg></div><h3>Transport & chauffeur</h3><p>Transferts aéroport, coordination de déplacements et recherche de solutions de transport adaptées à votre programme.</p></article>
-        <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10H3V10Z"/><path d="M9 20v-7h6v7"/></svg></div><h3>Intendance & gestion</h3><p>Suivi de résidences, coordination de prestataires, entretien et assistance pour la gestion de vos biens.</p></article>
-        <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="14" rx="1"/><path d="M9 7V4h6v3M3 13h18"/></svg></div><h3>Services aux entreprises</h3><p>Accueil de délégations, appui administratif, logistique et organisation de rendez-vous ou d'événements.</p></article>
-        <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 9.5 9.5 2 12l7.5 2.5L12 22l2.5-7.5L22 12l-7.5-2.5L12 2Z"/></svg></div><h3>Accompagnement VIP</h3><p>Accueil personnalisé, prestations de confort et coordination d'expériences sur mesure selon vos attentes.</p></article>
-        <article class="service-card reveal"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM8 9h8M8 13h6M8 17h4"/></svg></div><h3>Demandes spécifiques</h3><p>Vous avez un besoin qui sort du cadre habituel ? Discutons de votre projet pour identifier les possibilités.</p></article>
+
+<div class="topbar">
+  FP CASA 2 · Recrutement international · Casablanca, Maroc
+</div>
+
+<header>
+  <div class="container header-inner">
+    <a href="#accueil" class="logo">
+      <span class="logo-icon">FP</span>
+      <span>FP CASA 2
+        <small>Recrutement international</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false">☰</button>
+
+    <nav id="navigation">
+      <a href="#accueil">Accueil</a>
+      <a href="#metiers">Nos métiers</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#allemand">Langue allemande</a>
+      <a href="#allemagne">Allemagne</a>
+      <a href="#employeurs">Employeurs</a>
+      <a href="#contact" class="btn btn-primary">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ACCUEIL -->
+<section class="hero" id="accueil">
+  <div class="container hero-inner">
+    <div>
+      <span class="eyebrow">Votre avenir professionnel</span>
+      <h1>Votre talent mérite de <span>franchir les frontières.</span></h1>
+      <p>
+        FP CASA 2 accompagne les candidats qualifiés
+        du Maroc et d'Afrique dans leur projet professionnel
+        vers l'Allemagne et, selon les opportunités,
+        d'autres pays d'Europe.
+      </p>
+      <p>
+        De l'évaluation de votre profil à la préparation
+        de votre départ, nous privilégions une démarche
+        claire, structurée et humaine.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">
+          Nous contacter →
+        </a>
+        <a href="#parcours" class="btn btn-outline">
+          Découvrir le parcours
+        </a>
       </div>
-    </div></section>
-    <section class="section approach" id="approche"><div class="container approach-grid">
-      <div class="approach-aside reveal"><div class="section-heading"><span class="eyebrow">Comment nous travaillons</span><h2>Une méthode simple. Un service attentif.</h2><p>Chaque demande est différente. Notre rôle est d'en comprendre les enjeux et de vous proposer une organisation claire, du début à la fin.</p></div><a href="#contact" class="btn-text">Parlons de vos besoins <span aria-hidden="true">→</span></a></div>
-      <div class="steps"><div class="step reveal"><div class="step-no">01</div><div><h3>Échange & compréhension</h3><p>Nous prenons le temps d'identifier vos attentes, vos contraintes et le résultat recherché.</p></div></div><div class="step reveal"><div class="step-no">02</div><div><h3>Proposition personnalisée</h3><p>Nous définissons une solution adaptée, avec un périmètre de prestation clair.</p></div></div><div class="step reveal"><div class="step-no">03</div><div><h3>Organisation & coordination</h3><p>Nous facilitons les démarches et coordonnons les interventions convenues.</p></div></div><div class="step reveal"><div class="step-no">04</div><div><h3>Suivi & accompagnement</h3><p>Nous restons disponibles pour suivre l'avancement et ajuster le service si nécessaire.</p></div></div></div>
-    </div></section>
-    <section class="about" id="apropos"><div class="about-grid"><div class="about-image" role="img" aria-label="Espace de travail contemporain"></div><div class="about-content"><div class="reveal"><span class="eyebrow on-dark">À propos de FP CASA 2</span><h2>Un partenaire de confiance, proche de vous.</h2><p>Basée à Casablanca, FP CASA 2 a pour vocation de faciliter votre quotidien et d'accompagner vos projets avec un service attentif, souple et discret.</p><p>Notre conviction est simple : un bon accompagnement commence par l'écoute et se traduit par des solutions concrètes, adaptées à chaque situation.</p><ul class="about-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>Une approche fondée sur l'écoute</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>Discrétion dans le traitement des demandes</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>Des prestations adaptées à vos priorités</li></ul><a class="btn btn-outline" href="#contact">Entrer en contact <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></div></div></section>
-    <section class="section audiences" id="clients"><div class="container"><div class="section-heading reveal"><span class="eyebrow">Nos clients</span><h2>À vos côtés, quel que soit votre projet.</h2><p>Parce que les besoins d'un particulier et ceux d'une entreprise ne sont pas les mêmes, notre accompagnement s'adapte à chaque contexte.</p></div><div class="audiences-grid"><article class="audience-card reveal"><span class="eyebrow">01 — Particuliers</span><h3>Retrouvez du temps pour l'essentiel.</h3><p>Conciergerie, intendance, déplacements et assistance ponctuelle pour simplifier votre organisation personnelle.</p></article><article class="audience-card reveal"><span class="eyebrow">02 — Professionnels</span><h3>Concentrez-vous sur vos priorités.</h3><p>Appui logistique, coordination de prestations et accompagnement de vos besoins opérationnels.</p></article></div></div></section>
-    <section class="quote-band"><div class="container quote-inner"><div><span class="eyebrow">Un projet ? Une demande ?</span><h2>Construisons ensemble la solution qui vous correspond.</h2></div><a class="btn btn-primary" href="#contact">Parler de mon besoin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></section>
-    <section class="section contact" id="contact"><div class="container contact-grid"><div class="contact-copy reveal"><span class="eyebrow">Prenons contact</span><h2>Parlons de votre projet.</h2><p>Décrivez-nous ce que vous recherchez. Nous pourrons étudier ensemble les solutions adaptées à vos attentes.</p><div class="contact-info"><div class="contact-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1116 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Notre localisation</strong><p>Casablanca, Maroc</p></div></div><div class="contact-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg><div><strong>Adresse e-mail</strong><p>À confirmer avant mise en ligne définitive</p></div></div></div></div>
-      <div class="contact-panel reveal"><h3>Envoyez une demande</h3><p>Présentez-nous votre besoin à l'aide de ce formulaire.</p><form id="contactForm"><div class="form-row"><div class="field"><label for="name">Nom et prénom *</label><input id="name" name="name" autocomplete="name" required placeholder="Votre nom"></div><div class="field"><label for="phone">Téléphone</label><input id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+212 ..."></div></div><div class="field"><label for="email">Adresse e-mail *</label><input type="email" id="email" name="email" autocomplete="email" required placeholder="vous@exemple.com"></div><div class="field"><label for="service">Service recherché *</label><select name="service" id="service" required><option value="" disabled selected>Sélectionnez un service</option><option>Conciergerie privée</option><option>Transport & chauffeur</option><option>Intendance & gestion</option><option>Services aux entreprises</option><option>Accompagnement VIP</option><option>Autre demande</option></select></div><div class="field"><label for="message">Votre message *</label><textarea id="message" name="message" required placeholder="Parlez-nous de votre projet, de vos besoins ou de vos questions..."></textarea></div><button class="btn btn-primary submit-btn" type="submit">Préparer mon message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button><p class="form-note">Version de démonstration : l'envoi sera activé après configuration de l'adresse professionnelle.</p><div class="status" id="formStatus" role="status" aria-live="polite"></div></form></div>
-    </div></section>
-  </main>
-  <footer class="footer"><div class="container"><div class="footer-grid"><div><a href="#accueil" class="brand"><span class="brand-mark" aria-hidden="true">FP</span><span class="brand-lines"><span class="brand-name">FP CASA 2</span><span class="brand-label">Services & Conciergerie</span></span></a><p class="footer-about">Conciergerie, coordination et accompagnement sur mesure pour les particuliers et les professionnels à Casablanca.</p></div><div><h4>Navigation</h4><ul><li><a href="#accueil">Accueil</a></li><li><a href="#services">Nos services</a></li><li><a href="#approche">Notre approche</a></li><li><a href="#apropos">À propos</a></li><li><a href="#contact">Contact</a></li></ul></div><div><h4>Nos prestations</h4><ul><li>Conciergerie privée</li><li>Transport & chauffeur</li><li>Intendance & gestion</li><li>Services aux entreprises</li><li>Accompagnement VIP</li></ul></div></div><div class="footer-bottom"><span>© 2026 FP CASA 2. Tous droits réservés.</span><span>Casablanca · Maroc</span></div></div></footer>
-  <button type="button" class="backtop" id="backTop" aria-label="Revenir en haut"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path d="M12 19V5m-7 7 7-7 7 7"/></svg></button>
-  <script>
-    (() => {
-      const header = document.getElementById('siteHeader');
-      const toggle = document.getElementById('menuToggle');
-      const menu = document.getElementById('mainNav');
-      const backTop = document.getElementById('backTop');
-      function setMenu(open) { menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu'); }
-      toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
-      menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
-      document.addEventListener('keydown', event => { if(event.key === 'Escape') setMenu(false); });
-      document.addEventListener('click', event => { if (!header.contains(event.target)) setMenu(false); });
-      const updateScroll = () => { header.classList.toggle('scrolled', window.scrollY > 8); backTop.classList.toggle('visible', window.scrollY > 440); };
-      window.addEventListener('scroll', updateScroll, {passive:true}); updateScroll();
-      backTop.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
-      if ('IntersectionObserver' in window) { const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible'); observer.unobserve(e.target);} }), {threshold:.07});document.querySelectorAll('.reveal').forEach(e => observer.observe(e)); } else document.querySelectorAll('.reveal').forEach(e=>e.classList.add('visible'));
-      const form = document.getElementById('contactForm');
-      const status = document.getElementById('formStatus');
-      // Démo seulement : aucune donnée n'est envoyée. Configurer un service de formulaires sécurisé avant lancement réel.
-      form.addEventListener('submit', event => { event.preventDefault(); status.textContent = "Le formulaire est en mode démonstration : aucune information n'a été envoyée. Configurez l'adresse professionnelle et un service de réception pour activer les demandes."; status.classList.add('show'); });
-    })();
-  </script>
+    </div>
+
+    <div class="hero-image" role="img"
+      aria-label="Professionnels réunis en entreprise">
+      <div class="hero-badge">
+        <strong>Un accompagnement humain</strong>
+        <p>Un interlocuteur basé à Casablanca pour vous orienter dans votre projet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="proof-strip">
+  <div class="container proof-grid">
+    <div class="proof-item">
+      <div class="proof-icon">◎</div>
+      <div>
+        <strong>Évaluation individuelle</strong>
+        <small>Chaque parcours commence par votre profil.</small>
+      </div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-icon">◇</div>
+      <div>
+        <strong>Préparation structurée</strong>
+        <small>Langue, dossier et démarches.</small>
+      </div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-icon">✓</div>
+      <div>
+        <strong>Une démarche transparente</strong>
+        <small>Sans promesse d'emploi ou de visa garanti.</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRESENTATION -->
+<section id="apropos">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">Qui sommes-nous ?</span>
+      <h2>Relier les compétences aux opportunités.</h2>
+      <p>
+        Basée à Casablanca, FP CASA 2 est spécialisée
+        dans l'accompagnement de candidats qualifiés
+        vers des employeurs en Allemagne et en Europe.
+      </p>
+      <p>
+        Notre objectif est d'aider chaque candidat
+        à comprendre les possibilités correspondant
+        à son expérience, ses qualifications et
+        son projet professionnel.
+      </p>
+      <p>
+        Nous nous adressons également aux entreprises
+        européennes à la recherche de personnel qualifié.
+      </p>
+      <a href="#contact" class="btn btn-primary">
+        Prendre contact
+      </a>
+    </div>
+    <div class="split-image" style="background-image:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85')"></div>
+  </div>
+</section>
+
+<!-- METIERS -->
+<section id="metiers" class="bg-light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Domaines professionnels</span>
+      <h2>Des métiers, des perspectives concrètes.</h2>
+      <p>
+        Nous étudions les profils dans plusieurs secteurs.
+        Les possibilités de recrutement dépendent des besoins
+        réels des employeurs et des conditions applicables.
+      </p>
+    </div>
+
+    <div class="grid-3">
+
+      <article class="card">
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=80')"></div>
+        <div class="card-body">
+          <h3>Santé & soins</h3>
+          <p>Infirmiers, aides-soignants, techniciens de matériel médical et professionnels de santé qualifiés.</p>
+          <a href="#contact">Présenter mon profil →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=700&q=80')"></div>
+        <div class="card-body">
+          <h3>Cuisine & restauration</h3>
+          <p>Cuisiniers, chefs de partie, pâtissiers et professionnels de la restauration.</p>
+          <a href="#contact">Présenter mon profil →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80')"></div>
+        <div class="card-body">
+          <h3>Hôtellerie & service</h3>
+          <p>Réceptionnistes, serveurs, personnel hôtelier et professionnels de l'accueil.</p>
+          <a href="#contact">Présenter mon profil →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=700&q=80')"></div>
+        <div class="card-body">
+          <h3>Mécanique & maintenance</h3>
+          <p>Mécaniciens automobiles, poids lourds, maintenance industrielle et mécatroniciens.</p>
+          <a href="#contact">Présenter mon profil →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=700&q=80')"></div>
+        <div class="card-body">
+          <h3>Transport & logistique</h3>
+          <p>Chauffeurs de poids lourds et de bus, livreurs, magasiniers et personnel logistique.</p>
+          <a href="#contact">Présenter mon profil →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80')"></div>
+        <div class="card-body">
+          <h3>Bâtiment & travaux publics</h3>
+          <p>Maçons, électriciens, plombiers, soudeurs et chefs d'équipe.</p>
+          <a href="#contact">Présenter mon profil →</a>
+        </div>
+      </article>
+
+    </div>
+    <p style="margin-top:25px;font-size:14px">
+      Autres profils pouvant être étudiés : ingénieurs,
+      informaticiens et spécialistes en électronique.
+    </p>
+  </div>
+</section>
+
+<!-- PARCOURS -->
+<section id="parcours">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Votre parcours</span>
+      <h2>Cinq étapes pour structurer votre projet.</h2>
+      <p>
+        Une progression adaptée à votre métier, vos
+        qualifications et votre niveau linguistique.
+      </p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">ÉTAPE 01</span>
+        <h3>Premier contact</h3>
+        <p>Vous nous contactez pour présenter votre situation et votre projet.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">ÉTAPE 02</span>
+        <h3>Bilan de profil</h3>
+        <p>Étude de vos diplômes, de votre expérience et de vos objectifs.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">ÉTAPE 03</span>
+        <h3>Préparation</h3>
+        <p>Orientation linguistique, documents et reconnaissance des qualifications.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">ÉTAPE 04</span>
+        <h3>Mise en relation</h3>
+        <p>Candidatures, échanges avec les employeurs et préparation aux entretiens.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">ÉTAPE 05</span>
+        <h3>Visa & départ</h3>
+        <p>Informations sur les démarches administratives et l'installation.</p>
+      </div>
+    </div>
+
+    <p style="font-size:13px;margin-top:30px">
+      Les étapes et délais varient selon le métier,
+      le pays, le niveau de langue et les administrations.
+      Aucun recrutement ni visa n'est garanti.
+    </p>
+  </div>
+</section>
+
+<!-- LANGUE ALLEMANDE -->
+<section id="allemand" class="bg-light">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Préparation linguistique</span>
+      <h2>L'allemand, un atout pour votre projet.</h2>
+      <p>
+        Selon le métier et la voie de recrutement,
+        un niveau d'allemand peut être demandé.
+        FP CASA 2 prévoit d'orienter les candidats
+        vers une préparation appropriée.
+      </p>
+    </div>
+
+    <div class="levels">
+      <div class="level">
+        <b>A1</b>
+        <h3>Premiers échanges</h3>
+        <p>Les bases de la communication et les situations simples.</p>
+      </div>
+      <div class="level">
+        <b>A2</b>
+        <h3>Communication courante</h3>
+        <p>Échanges pratiques et compréhension du quotidien.</p>
+      </div>
+      <div class="level">
+        <b>B1</b>
+        <h3>Autonomie</h3>
+        <p>Communication plus indépendante et situations professionnelles.</p>
+      </div>
+      <div class="level">
+        <b>B2</b>
+        <h3>Communication avancée</h3>
+        <p>Échanges détaillés et compréhension professionnelle approfondie.</p>
+      </div>
+    </div>
+
+    <p style="font-size:13px;margin-top:25px">
+      Le niveau requis dépend de la profession et des
+      règles applicables. Les modalités des cours et
+      les partenaires linguistiques restent à confirmer.
+    </p>
+  </div>
+</section>
+
+<!-- ALLEMAGNE -->
+<section id="allemagne">
+  <div class="container split">
+    <div class="split-image" style="background-image:url('https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=1000&q=85')"></div>
+    <div>
+      <span class="eyebrow">Destination principale</span>
+      <h2>Pourquoi choisir l'Allemagne ?</h2>
+      <p>
+        L'Allemagne propose différentes voies
+        d'accès à l'emploi pour des professionnels
+        internationaux qualifiés.
+      </p>
+      <p>
+        Les conditions varient selon le métier,
+        la reconnaissance des qualifications,
+        les exigences linguistiques et le type de visa.
+      </p>
+      <ul class="check-list">
+        <li>Découvrir les secteurs professionnels</li>
+        <li>Comprendre la reconnaissance des diplômes</li>
+        <li>Se renseigner sur les démarches de visa</li>
+        <li>Préparer la vie quotidienne et l'installation</li>
+      </ul>
+      <a href="https://www.make-it-in-germany.com/fr/" target="_blank" rel="noopener" class="btn btn-outline">
+        Consulter les informations officielles ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EMPLOYEURS -->
+<section id="employeurs" class="employer-section">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">Pour les entreprises européennes</span>
+      <h2>Des compétences adaptées à vos besoins.</h2>
+      <p>
+        FP CASA 2 accompagne les employeurs
+        souhaitant étudier le recrutement de
+        professionnels qualifiés du Maroc et d'Afrique.
+      </p>
+      <ul class="check-list">
+        <li>Étude des besoins et des postes recherchés</li>
+        <li>Présélection des candidatures</li>
+        <li>Étude des diplômes et du niveau linguistique</li>
+        <li>Organisation des entretiens</li>
+        <li>Accompagnement des démarches de recrutement</li>
+      </ul>
+      <a href="#contact" class="btn" style="background:white;color:#142d36">
+        Nous contacter →
+      </a>
+    </div>
+    <div class="split-image" style="background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85')"></div>
+  </div>
+</section>
+
+<!-- VALEURS -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Nos engagements</span>
+      <h2>La confiance se construit avec des réponses claires.</h2>
+    </div>
+    <div class="values">
+      <div class="value">
+        <h3>Transparence</h3>
+        <p>Expliquer les démarches, les conditions et les frais applicables.</p>
+      </div>
+      <div class="value">
+        <h3>Honnêteté</h3>
+        <p>Ne jamais promettre un emploi ou un visa garanti.</p>
+      </div>
+      <div class="value">
+        <h3>Accompagnement humain</h3>
+        <p>Privilégier un échange direct avec un interlocuteur à Casablanca.</p>
+      </div>
+      <div class="value">
+        <h3>Respect des candidats</h3>
+        <p>Considérer chaque parcours professionnel avec sérieux et dignité.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<!-- FAQ -->
+<section class="bg-light">
+  <div class="container">
+    <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2>Vos questions, nos réponses.</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Faut-il déjà parler allemand pour postuler ?</summary>
+        <p>Pas nécessairement pour un premier échange. Cependant, un niveau linguistique peut être exigé pour certains métiers, emplois ou visas.</p>
+      </details>
+      <details>
+        <summary>Un diplôme est-il obligatoire ?</summary>
+        <p>Les conditions dépendent du métier et de la voie d'accès à l'emploi. Une qualification professionnelle, un diplôme ou de l'expérience peuvent être pertinents selon le poste.</p>
+      </details>
+      <details>
+        <summary>FP CASA 2 garantit-elle un visa ?</summary>
+        <p>Non. La décision appartient aux autorités compétentes, selon les règles applicables au dossier.</p>
+      </details>
+      <details>
+        <summary>Combien de temps dure le processus ?</summary>
+        <p>La durée varie selon les documents, la langue, le recrutement et les délais administratifs. Aucun délai uniforme n'est annoncé.</p>
+      </details>
+      <details>
+        <summary>Quels sont les frais ?</summary>
+        <p>Les modalités de rémunération et les éventuels frais doivent être confirmés et publiés par FP CASA 2 avant le lancement des services.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Contact</span>
+      <h2>Parlons de votre projet professionnel.</h2>
+      <p>
+        Vous êtes candidat ou employeur ?
+        Contactez FP CASA 2 pour obtenir des informations
+        adaptées à votre situation.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="form-box">
+        <h3>Envoyer une demande</h3>
+        <p style="font-size:13px">
+          Formulaire de démonstration.
+          L'envoi sera activé après configuration.
+        </p>
+
+        <form id="contactForm">
+          <input type="text" name="nom"
+            placeholder="Nom et prénom" required>
+
+          <input type="email" name="email"
+            placeholder="Adresse e-mail" required>
+
+          <input type="tel" name="telephone"
+            placeholder="Téléphone (+212...)" required>
+
+          <select name="profil" required>
+            <option value="">Vous êtes...</option>
+            <option value="candidat">Candidat</option>
+            <option value="employeur">Employeur</option>
+          </select>
+
+          <select name="secteur">
+            <option value="">Secteur professionnel</option>
+            <option>Santé et soins</option>
+            <option>Cuisine et restauration</option>
+            <option>Hôtellerie</option>
+            <option>Mécanique</option>
+            <option>Transport et logistique</option>
+            <option>Bâtiment</option>
+            <option>Autre secteur</option>
+          </select>
+
+          <textarea name="message"
+            placeholder="Décrivez votre demande"
+            required></textarea>
+
+          <label style="font-size:12px">
+            <input type="checkbox" style="width:auto"
+              required disabled>
+            J'accepte le traitement de mes données
+            dans le cadre de cette demande.
+          </label>
+
+          <button type="submit" disabled>
+            Envoi en attente de configuration
+          </button>
+          <span class="note">
+            Aucune donnée n'est envoyée actuellement.
+            La politique de confidentialité et la
+            réception des demandes doivent être validées.
+          </span>
+        </form>
+      </div>
+
+      <div>
+        <div class="contact-info">
+          <strong>Localisation</strong>
+          <p>Casablanca, Maroc</p>
+          <small>Adresse exacte à confirmer</small>
+        </div>
+
+        <div class="contact-info">
+          <strong>Téléphone / WhatsApp</strong>
+          <p>Coordonnées à ajouter</p>
+        </div>
+
+        <div class="contact-info">
+          <strong>E-mail professionnel</strong>
+          <p>Adresse à confirmer</p>
+        </div>
+
+        <div class="contact-box">
+          <h3>Une question sur votre candidature ?</h3>
+          <p>
+            Notre équipe vous orientera sur la
+            marche à suivre lorsque les canaux
+            de contact seront disponibles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>FP CASA 2</h3>
+        <p>
+          Recrutement et accompagnement de
+          professionnels qualifiés du Maroc et
+          d'Afrique vers l'Allemagne et l'Europe.
+        </p>
+        <p>Casablanca, Maroc.</p>
+      </div>
+      <div>
+        <h3>Découvrir</h3>
+        <a href="#metiers">Nos métiers</a>
+        <a href="#parcours">Parcours candidat</a>
+        <a href="#allemand">Langue allemande</a>
+        <a href="#allemagne">Pourquoi l'Allemagne ?</a>
+      </div>
+      <div>
+        <h3>Informations</h3>
+        <a href="#employeurs">Employeurs</a>
+        <a href="#contact">Contact</a>
+        <p>Mentions légales et confidentialité : textes à valider avant publication.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 FP CASA 2. Tous droits réservés.
+    </div>
+  </div>
+</footer>
+
+<script>
+const menuButton = document.getElementById("menuToggle");
+const navigation = document.getElementById("navigation");
+
+menuButton.addEventListener("click", function() {
+  const opened = navigation.classList.toggle("open");
+  menuButton.setAttribute("aria-expanded", String(opened));
+  menuButton.textContent = opened ? "✕" : "☰";
+});
+
+navigation.querySelectorAll("a").forEach(function(link) {
+  link.addEventListener("click", function() {
+    navigation.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.textContent = "☰";
+  });
+});
+</script>
+
 </body>
 </html>
